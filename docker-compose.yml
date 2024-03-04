@@ -1,41 +1,6 @@
 version: '3.8'
 
 services:
-  api1:
-    hostname: api1
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: gutocugnier/api-rinha:latest
-    ports:
-      - 8080:8080
-    depends_on:
-      - db
-    deploy:
-      resources:
-        limits:
-          cpus: '0.3'
-          memory: '0.7GB'
-    networks:
-      - app-network
-
-  api2:
-    hostname: api2
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: gutocugnier/api-rinha:latest
-    ports:
-      - 8081:8081
-    depends_on:
-      - db
-    deploy:
-      resources:
-        limits:
-          cpus: '0.3'
-          memory: '0.7GB'
-    networks:
-      - app-network
   db:
     image: postgres
     container_name: postgres-rinha
@@ -45,6 +10,3 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: rinha-db
-
-networks:
-  app-network:
