@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: postgres-rinha
+    ports:
+      - "5454:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: rinha-db
+
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 3s
+      timeout: 5s
+      retries: 10
+
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 60s
+      resources:
+        limits:
+          cpus: '0.6'
+          memory: '1.4GB'
