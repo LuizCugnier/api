@@ -26,10 +26,10 @@ public class PessoaService {
         return pessoaRepository.save(pessoa);
     }
 
-//    public List<Pessoa> findPessoas()
-//    {
-//        return pessoaRepository.findAll();
-//    }
+    public List<Pessoa> findPessoas()
+    {
+        return pessoaRepository.findAll();
+    }
 
     public Optional<Pessoa> getPessoa(UUID id)
     {
