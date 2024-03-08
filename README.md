@@ -32,7 +32,7 @@ Para terminar a execução dos containers, execute o comando:
 
 #### Cria uma pessoa
 
-```http
+```
   POST /pessoas
 ```
 Recebendo um corpo como o exemplo abaixo.
@@ -47,7 +47,7 @@ Recebendo um corpo como o exemplo abaixo.
 
 #### Retorna uma pessoa com id específico
 
-```http
+```
   GET /pessoas/${id}
 ```
 
@@ -57,7 +57,7 @@ Recebendo um corpo como o exemplo abaixo.
 
 #### Retorna pessoas com o termo passado
 
-```http
+```
   GET /pessoas?t=php
 ```
 
@@ -67,13 +67,13 @@ Recebendo um corpo como o exemplo abaixo.
 
 #### Retorna quantidade de pessoas cadastradas
 
-```http
+```
   GET /contagem-pessoas
 ```
 
 #### Retorna todos os usuários (TESTE)
 
-```http
+```
   GET /buscarpessoas
 ```
 ## Autor
