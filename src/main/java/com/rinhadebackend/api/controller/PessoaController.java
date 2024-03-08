@@ -36,11 +36,11 @@ public class PessoaController {
     }
 
     //APENAS PARA TESTES (RETIRAR DPS)
-//    @RequestMapping(value = "/pessoas/all", method = RequestMethod.GET)
-//    public List<Pessoa> Get()
-//    {
-//        return pessoaService.findPessoas();
-//    }
+    @RequestMapping(value = "/buscarpessoas", method = RequestMethod.GET)
+    public List<Pessoa> Get()
+    {
+        return pessoaService.findPessoas();
+    }
 
     @RequestMapping(value = "/pessoas/{id}", method = RequestMethod.GET)
     public Optional<Pessoa> GetPessoaId(@PathVariable("id") UUID id)
